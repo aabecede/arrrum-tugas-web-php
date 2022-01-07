@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Tugas Web &mdash; Arrum Rahayu</title>
+  <title>Tugas Web &mdash; Arruum Rahayu</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -84,9 +84,9 @@
 
                 <h1>Welcome , <span class="typed-words"></span></h1>
                 <p>This is my personal Website, Enjoyed ... </p>
-                <!-- <h1>Arrum Rahayu , <span class="typed-words"></span></h1>
-                <p>Call Me Arrum Rahayu from University Muhamadiyah Malang (  )</p> -->
-                <p><a href="#contact-section" class="btn btn-warning px-5 py-3 text-white smoothscroll">Contact Me</a>
+                <!-- <h1>Arruum Rahayu , <span class="typed-words"></span></h1>
+                <p>Call Me Arruum Rahayu from University Muhamadiyah Malang (  )</p> -->
+                <p><a href="mailto:arumrahayu3@gmail.com"target="_blank" class="btn btn-warning px-5 py-3 text-white smoothscroll">Contact Me</a>
                 </p>
               </div>
 
@@ -102,7 +102,7 @@
         <div class="row">
           <div class="col-12" style="margin-top: -20%;">
             <div class="slide-one-item home-slider owl-carousel">
-              <img style="max-width: 1100px; max-height: 733px; object-fit:contain;" src="images/arrum-profile-1.png"
+              <img style="max-width: 1100px; max-height: 733px; object-fit:contain;" src="images/foto-profile-1.jpeg"
                 alt="Image" class="img-fluid img">
               <img style="max-width: 1100px; max-height: 733px; object-fit:contain;" src="images/foto-profile-2.jpeg"
                 alt="Image" class="img-fluid img">
@@ -121,7 +121,7 @@
             <h2 class="text-black mb-4">Welcome To My Website</h2>
             <div class="form-group">
               <label>Nama Lengkap</label>
-              <input type="text" class="form-control" value="Arrum Rahayu" readonly>
+              <input type="text" class="form-control" value="Arruum Rahayu" readonly>
             </div>
             <div class="form-group">
               <label>NIM</label>
@@ -133,7 +133,7 @@
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="text" class="form-control" value="Arumrahayu3@gmail.com" readonly>
+              <input type="text" class="form-control" value="arumrahayu3@gmail.com" readonly>
             </div>
             <p class="text-justify">
               Halo, Perkenalkan namaku Arruum Rahayu. Kalian bisa memanggilku Arruum. Lahir di Kediri, 3 Oktober 2001,
@@ -209,10 +209,10 @@
                 <a href="single.php"><img src="images/pemusatan-data-2.png" alt="Image" class="img-fluid rounded"></a>
               </figure>
               <div class="blog-entry-text">
-                <h3><a href="single.php">Pemusatan Data (Modus Mean Median)</a></h3>
+                <h3><a href="single.php">Pemusatan Data Tunggal(Mean, Median, Modus)</a></h3>
                 <span class="post-meta mb-3 d-block">Oktover 18, 2021</span>
                 <p style="text-align: justify;">
-                  Ukuran pemusatan data adalah sembarang ukuran yang menunjukkan pusat segugus data ...
+                  Ukuran pemusatan data tunggal adalah sembarang ukuran yang menunjukkan pusat segugus data ...
                 </p>
                 <p><a href="single.php" class="">Read More..</a></p>
               </div>
@@ -328,7 +328,7 @@
   <script src="js/typed.js"></script>
   <script>
     var typed = new Typed('.typed-words', {
-      strings: [" Muhamadiyah University of Malang", 'Mathematic Education', "Arrum Rahayu"],
+      strings: [" Muhamadiyah University of Malang", 'Mathematic Education', "Arruum Rahayu"],
       typeSpeed: 80,
       backSpeed: 80,
       backDelay: 4000,

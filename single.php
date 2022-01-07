@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Coaching &mdash; Website Template by Colorlib</title>
+  <title>Tugas Web &mdash; Arruum Rahayu</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -80,8 +80,8 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12 mt-lg-5 text-center">
-            <h1>Pemusatan Data ( Modus Mean Median)</h1>
-            <p class="post-meta">Oktober 18, 2021 &bull; Posted by <a href="#">Arrun Rahayu</a>
+            <h1>Pemusatan Data Tunggal( Mean, Median, Modus)</h1>
+            <p class="post-meta">Januari 17, 2022 &bull; Posted by <a href="#">Arruum Rahayu</a>
             </p>
           </div>
         </div>
@@ -155,6 +155,10 @@
               Dalam kehidupan sehari-hari akan ada banyak data yang kita temukan cara bagaimana mengumpulkan, menyajikan hingga menganalisis dan juga membuat kesimpulan dari sebuah data maka kita dapat mempelajari ilmu statistika.
               Banyak kegiatan sehari-hari yang membutuhkan ilmu statistika untuk menyelesaikannya contohnya voting suara dalam pemilihan presiden. Berikut ini akan dibahas mengenai pengertian, rumus dan contoh soal statistika data tunggal.
               <br>
+            <h3>
+              Peta Konsep Materi</h3>
+            <p align="center">
+              <img src="diagram.jpg">
               <hr>
               <iframe style="width: 100%; height: 458px;" src="https://www.youtube.com/embed/TNmNXlPwhYU" frameborder="0" allowfullscreen>
               </iframe>

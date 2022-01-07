@@ -1,3 +1,80 @@
+<?php
+function pre(...$array)
+{
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
+    die();
+}
+
+$kunci_jawaban = [
+    '1' => [
+        'skor' => '5',
+        'kunci' => 'd',
+    ],
+    '2' => [
+        'skor' => '7.5',
+        'kunci' => 'a',
+    ],
+    '3' => [
+        'skor' => '7.5',
+        'kunci' => 'a',
+    ],
+    '4' => [
+        'skor' => '10',
+        'kunci' => 'c',
+    ],
+    '5' => [
+        'skor' => '10',
+        'kunci' => 'd',
+    ],
+    '6' => [
+        'skor' => '10',
+        'kunci' => 'c',
+    ],
+    '7' => [
+        'skor' => '15',
+        'kunci' => 'b',
+    ],
+    '8' => [
+        'skor' => '10',
+        'kunci' => 'c',
+    ],
+    '9' => [
+        'skor' => '10',
+        'kunci' => 'd',
+    ],
+    '10' => [
+        'skor' => '15',
+        'kunci' => 'd',
+    ],
+];
+// pre($_POST['soal']);
+$checked_jawaban = [];
+$skor_siswa = 0;
+$total_skor = 0;
+foreach ($kunci_jawaban as $key => $value) {
+    // pre($key, $_POST[$key] ?? null);
+    if (!empty($_POST['soal'][$key])) {
+        $post_value = $_POST['soal'][$key];
+        $var_key = $key;
+        $checked_jawaban[$key][$post_value] = 'checked';
+        if ($post_value == $value['kunci']) {
+            $skor_siswa += $value['skor'];
+            $total_skor += $value['skor'];
+        } else {
+            $total_skor += $value['skor'];
+        }
+        // $checked_jawaban['$']['a']r_key$post_value = 'checked';
+    } else {
+        $total_skor += $value['skor'];
+    }
+    // pre($key);
+}
+
+// pre($checked_jawaban[9]['d']);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -31,62 +108,6 @@
 
 
     <div class="site-wrap">
-
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div>
-
-
-        <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-6 col-xl-2">
-                        <h1 class="mb-0 site-logo"><a href="index.php" class="h2 mb-0">Pembelajaran<span class="text-primary">.</span>
-                            </a></h1>
-                    </div>
-
-                    <div class="col-12 col-md-10 d-none d-xl-block">
-                        <nav class="site-navigation position-relative text-right" role="navigation">
-
-                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                                <li><a href="index.php#home-section" class="nav-link">Home</a></li>
-                                <li><a href="index.php#about-section" class="nav-link">About</a></li>
-                                <li><a href="index.php#blog-section" class="nav-link">Materi</a></li>
-                                <!-- <li><a href="index.php#contact-section" class="nav-link">Contact</a></li> -->
-                            </ul>
-                        </nav>
-                    </div>
-
-
-                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-                </div>
-            </div>
-
-        </header>
-
-
-        <div class="site-blocks-cover" data-aos="fade">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-12 mt-lg-5 text-center">
-                        <h1>Latihan Soal Pemusatan Data ( Modus Mean Median)</h1>
-                        <p class="post-meta">Januari 06, 2022 &bull; Posted by <a href="#">Arrun Rahayu</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
         <section class="site-section">
             <div class="container">
                 <div class="row">
@@ -103,20 +124,19 @@
                             </div>
                             <div clsas="col-12">
                                 <h2 class="text-black mb-4">Latihan Soal</h2>
+                                <h6>Nama : <?php echo $_POST['nama']; ?><h6>
+                                        <h6>Asal Sekolah : <?php echo $_POST['asal_sekolah']; ?><h6>
+                                                <h6>SKOR : <?php echo $skor_siswa . ' / ' . $total_skor; ?><h6>
+                                                        <h6>
+                                                            <a href="#" class="btn btn-primary" onclick="printHasil()">Cetak</a>
+                                                            <h6>
+                                                                <small>
+                                                                    <a href="latihan-soal.php">Kembali kehalaman latihan</a>
+                                                                </small>
                             </div>
                         </div>
                         <form method="post" enctype="multipart/form-data" action="hasil.php">
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label>Nama</label>
-                                        <input  required type="text" class="form-control" name="nama">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Asal Sekolah</label>
-                                        <input  required type="text" class="form-control" name="asal_sekolah">
-                                    </div>
-                                </div>
                                 <div class="col-1">
                                     1.
                                 </div>
@@ -167,25 +187,25 @@
                                     <small>Skor (5)</small><br>
                                     Istilah yang tepat untuk definisi di atas adalah (Urut istilah 1,2,3 ). . .
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[1]" id="soal1-a" value="a">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['1']['a'] ?? null) ?> name="soal[1]" id="soal1-a" value="a">
                                         <label class="form-check-label" for="soal1-a">
                                             A. Modus, mean, median
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[1]" id="soal1-b" value="b">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['1']['b'] ?? null) ?> name="soal[1]" id="soal1-b" value="b">
                                         <label class="form-check-label" for="soal1-b">
                                             B. Median, modus, mean
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[1]" id="soal1-c" value="c">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['1']['c'] ?? null) ?> name="soal[1]" id="soal1-c" value="c">
                                         <label class="form-check-label" for="soal1-c">
                                             C. Rata-rata, mean, median
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[1]" id="soal1-d" value="d">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['1']['d'] ?? null) ?> name="soal[1]" id="soal1-d" value="d">
                                         <label class="form-check-label" for="soal1-d">
                                             D. Modus, median, mean
                                         </label>
@@ -200,25 +220,25 @@
                                         <br>
                                         <small>Skor (7,5)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[2]" id="soal2-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['2']['a'] ?? null) ?> name="soal[2]" id="soal2-a" value="a">
                                             <label class="form-check-label" for="soal2-a">
                                                 A. 13
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[2]" id="soal2-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['2']['b'] ?? null) ?> name="soal[2]" id="soal2-b" value="b">
                                             <label class="form-check-label" for="soal2-b">
                                                 B. 12
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[2]" id="soal2-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['2']['c'] ?? null) ?> name="soal[2]" id="soal2-c" value="c">
                                             <label class="form-check-label" for="soal2-c">
                                                 c. 11
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[2]" id="soal2-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['2']['d'] ?? null) ?> name="soal[2]" id="soal2-d" value="d">
                                             <label class="form-check-label" for="soal2-d">
                                                 D. 10
                                             </label>
@@ -234,25 +254,25 @@
                                         <br>
                                         <small>Skor (7.5)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[3]" id="soal3-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['3']['a'] ?? null) ?> name="soal[3]" id="soal3-a" value="a">
                                             <label class="form-check-label" for="soal3-a">
                                                 A. 3
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[3]" id="soal3-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['3']['b'] ?? null) ?> name="soal[3]" id="soal3-b" value="b">
                                             <label class="form-check-label" for="soal3-b">
                                                 B. 5
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[3]" id="soal3-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['3']['c'] ?? null) ?> name="soal[3]" id="soal3-c" value="c">
                                             <label class="form-check-label" for="soal3-c">
                                                 C. 7
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[3]" id="soal3-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['3']['d'] ?? null) ?> name="soal[3]" id="soal3-d" value="d">
                                             <label class="form-check-label" for="soal3-d">
                                                 D. 4
                                             </label>
@@ -268,25 +288,25 @@
                                         <br>
                                         <small>Skor (10)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[4]" id="soal4-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['4']['a'] ?? null) ?> name="soal[4]" id="soal4-a" value="a">
                                             <label class="form-check-label" for="soal4-a">
                                                 A. 65,5
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[4]" id="soal4-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['4']['b'] ?? null) ?> name="soal[4]" id="soal4-b" value="b">
                                             <label class="form-check-label" for="soal4-b">
                                                 B. 55
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[4]" id="soal4-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['4']['c'] ?? null) ?> name="soal[4]" id="soal4-c" value="c">
                                             <label class="form-check-label" for="soal4-c">
                                                 C. 65
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[4]" id="soal4-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['4']['d'] ?? null) ?> name="soal[4]" id="soal4-d" value="d">
                                             <label class="form-check-label" for="soal4-d">
                                                 D. 75
                                             </label>
@@ -303,23 +323,23 @@
                                         <br>
                                         <small>skor (10)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[5]" id="soal5-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['5']['a'] ?? null) ?> name="soal[5]" id="soal5-a" value="a">
                                             <label class="form-check-label" for="soal5-a">
                                                 A. Modus = Median < Mean </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[5]" id="soal5-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['5']['b'] ?? null) ?> name="soal[5]" id="soal5-b" value="b">
                                             <label class="form-check-label" for="soal5-b">
                                                 B. Modus > Median > Mean
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[5]" id="soal5-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['5']['c'] ?? null) ?> name="soal[5]" id="soal5-c" value="c">
                                             <label class="form-check-label" for="soal5-c">
                                                 C. Modus > Median < Mean </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[5]" id="soal5-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['5']['d'] ?? null) ?> name="soal[5]" id="soal5-d" value="d">
                                             <label class="form-check-label" for="soal5-d">
                                                 D. Modus < Median < Mean </label>
                                         </div>
@@ -334,25 +354,25 @@
                                         <br>
                                         <small>Skor (10)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[6]" id="soal6-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['6']['a'] ?? null) ?> name="soal[6]" id="soal6-a" value="a">
                                             <label class="form-check-label" for="soal6-a">
                                                 A. 5,6
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[6]" id="soal6-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['6']['b'] ?? null) ?> name="soal[6]" id="soal6-b" value="b">
                                             <label class="form-check-label" for="soal6-b">
                                                 B. 6,6
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[6]" id="soal6-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['6']['c'] ?? null) ?> name="soal[6]" id="soal6-c" value="c">
                                             <label class="form-check-label" for="soal6-c">
                                                 C. 7,6
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[6]" id="soal6-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['6']['d'] ?? null) ?> name="soal[6]" id="soal6-d" value="d">
                                             <label class="form-check-label" for="soal6-d">
                                                 D. 8,6
                                             </label>
@@ -368,25 +388,25 @@
                                         <br>
                                         <small>skor (15)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[7]" id="soal7-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['7']['a'] ?? null) ?> name="soal[7]" id="soal7-a" value="a">
                                             <label class="form-check-label" for="soal7-a">
                                                 A. 20
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[7]" id="soal7-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['7']['b'] ?? null) ?> name="soal[7]" id="soal7-b" value="b">
                                             <label class="form-check-label" for="soal7-b">
                                                 B. 10
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[7]" id="soal7-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['7']['c'] ?? null) ?> name="soal[7]" id="soal7-c" value="c">
                                             <label class="form-check-label" for="soal7-c">
                                                 C. 5
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[7]" id="soal7-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['7']['d'] ?? null) ?> name="soal[7]" id="soal7-d" value="d">
                                             <label class="form-check-label" for="soal7-d">
                                                 D. 15
                                             </label>
@@ -402,25 +422,25 @@
                                         <br>
                                         <small>skor (10)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[8]" id="soal8-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['8']['a'] ?? null) ?> name="soal[8]" id="soal8-a" value="a">
                                             <label class="form-check-label" for="soal8-a">
                                                 D. 4
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[8]" id="soal8-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['8']['b'] ?? null) ?> name="soal[8]" id="soal8-b" value="b">
                                             <label class="form-check-label" for="soal8-b">
                                                 D. 4
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[8]" id="soal8-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['8']['c'] ?? null) ?> name="soal[8]" id="soal8-c" value="c">
                                             <label class="form-check-label" for="soal8-c">
                                                 D. 4
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[8]" id="soal8-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['8']['d'] ?? null) ?> name="soal[8]" id="soal8-d" value="d">
                                             <label class="form-check-label" for="soal8-d">
                                                 D. 4
                                             </label>
@@ -468,25 +488,25 @@
                                         <br>
                                         <small>skor (10)</small>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[9]" id="soal9-a" value="a">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['9']['a'] ?? null) ?> name="soal[9]" id="soal9-a" value="a">
                                             <label class="form-check-label" for="soal9-a">
                                                 A. 51 dan 53
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[9]" id="soal9-b" value="b">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['9']['b'] ?? null) ?> name="soal[9]" id="soal9-b" value="b">
                                             <label class="form-check-label" for="soal9-b">
                                                 B. 51 dan 50
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[9]" id="soal9-c" value="c">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['9']['c'] ?? null) ?> name="soal[9]" id="soal9-c" value="c">
                                             <label class="form-check-label" for="soal9-c">
                                                 C. 51 dan 52
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="soal[9]" id="soal9-d" value="d">
+                                            <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['9']['d'] ?? null) ?> name="soal[9]" id="soal9-d" value="d">
                                             <label class="form-check-label" for="soal9-d">
                                                 D. 51 dan 51
                                             </label>
@@ -504,90 +524,41 @@
                                     <br>
                                     <small>skor(10)</small>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[10]" id="soal10-a" value="a">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['10']['a'] ?? null) ?> name="soal[10]" id="soal10-a" value="a">
                                         <label class="form-check-label" for="soal10-a">
                                             A. 82
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[10]" id="soal10-b" value="b">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['10']['b'] ?? null) ?> name="soal[10]" id="soal10-b" value="b">
                                         <label class="form-check-label" for="soal10-b">
                                             B. 78
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[10]" id="soal10-c" value="c">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['10']['c'] ?? null) ?> name="soal[10]" id="soal10-c" value="c">
                                         <label class="form-check-label" for="soal10-c">
                                             C. 74
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="soal[10]" id="soal10-d" value="d">
+                                        <input class="form-check-input" type="radio" disabled <?php echo ($checked_jawaban['10']['d'] ?? null) ?> name="soal[10]" id="soal10-d" value="d">
                                         <label class="form-check-label" for="soal10-d">
                                             D. 68
                                         </label>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-success" style="float:right;">Simpan Jawaban</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
         </section>
-
-
-
-        <footer class="site-footer bg-primary">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="footer-heading mb-4">Pembelajaran</h2>
-                        <p>
-                            Tempat Untuk sharing dan belajar
-                        </p>
-                    </div>
-
-
-                    <div class="col-md-3 ml-auto">
-                        <h2 class="footer-heading mb-4">Quick Links</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#about-section" class="smoothscroll">About Me</a></li>
-                            <li><a href="#blog-section" class="smoothscroll">Materi</a></li>
-                            <!-- <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li> -->
-                        </ul>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-5">
-                            <h2 class="footer-heading mb-4">Follow Me</h2>
-                            <a href="https://instagram.com/ayumdoubleru?utm_medium=copy_link" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row pt-5 mt-5 text-left">
-                    <div class="col-md-12">
-                        <div class="border-top pt-5">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            <p>Copyright &copy;
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> Created by <a href="https://github.com/abuduru" target="_blank">abuduru <i class="icon-heart-o" aria-hidden="true"></i></a>
-                            </p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </footer>
-
     </div> <!-- .site-wrap -->
+    <script>
+        function printHasil() {
+            window.print();
+        }
+    </script>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
