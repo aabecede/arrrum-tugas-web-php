@@ -146,7 +146,7 @@
               </figure>
               <div class="blog-entry-text">
                 <h3><a href="single.php">Pemusatan Data Tunggal(Mean, Median, Modus)</a></h3>
-                <span class="post-meta mb-3 d-block">Oktover 18, 2021</span>
+                <span class="post-meta mb-3 d-block">November 23, 2023</span>
                 <p style="text-align: justify;">
                   Ukuran pemusatan data tunggal adalah sembarang ukuran yang menunjukkan pusat segugus data ...
                 </p>

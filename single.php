@@ -81,7 +81,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12 mt-lg-5 text-center">
             <h1>Pemusatan Data Tunggal( Mean, Median, Modus)</h1>
-            <p class="post-meta">Januari 17, 2022 &bull; Posted by <a href="#">Arruum Rahayu</a>
+            <p class="post-meta">November 23, 2023 &bull; Posted by <a href="#">Arruum Rahayu</a>
             </p>
           </div>
         </div>
