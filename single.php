@@ -99,7 +99,7 @@
                 <img src="images/logo-umm/logo.png" style="width:100%; height:auto;">
               </div>
               <div class="col-6">
-                <img src="images/mengajar-merdeka.png" style="width:100%; height:auto;">
+                <img src="images/mengajar-merdeka.jpeg" style="width:100%; height:auto;">
               </div>
             </div>
             <h2 class="text-black mb-4">Materi Pembelajaran</h2>

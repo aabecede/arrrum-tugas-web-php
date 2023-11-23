@@ -78,7 +78,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-12 mt-lg-5 text-center">
                         <h1>Latihan Soal Pemusatan Data ( Modus Mean Median)</h1>
-                        <p class="post-meta">Januari 06, 2022 &bull; Posted by <a href="#">Arrun Rahayu</a>
+                        <p class="post-meta">November 23, 2023 &bull; Posted by <a href="#">Arrun Rahayu</a>
                         </p>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                                 <img src="images/logo-umm/logo.png" style="width:100%; height:auto;">
                             </div>
                             <div class="col-6">
-                                <img src="images/logo-umm/math-edu.png" style="width:100%; height:auto;">
+                                <img src="images/mengajar-merdeka.jpeg" style="width:100%; height:auto;">
                             </div>
                             <div clsas="col-12">
                                 <h2 class="text-black mb-4">Latihan Soal</h2>
