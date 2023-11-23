@@ -160,8 +160,7 @@
             <p align="center">
               <img src="diagram.jpg">
               <hr>
-              <iframe style="width: 100%; height: 458px;" src="https://www.youtube.com/watch?v=TNZ1gnpd540&ab_channel=GongbuChannel" frameborder="0" allowfullscreen>
-              </iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/TNZ1gnpd540?si=bcAB5JjAz101LaRr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               <hr>
             </p>
             <h4>Contoh Soal MEAN</h4>
