@@ -97,21 +97,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12" style="margin-top: -20%;">
-            <div class="slide-one-item home-slider owl-carousel">
-              <img style="max-width: 1100px; max-height: 733px; object-fit:contain;" src="images/foto-profile-1.jpeg"
-                alt="Image" class="img-fluid img">
-              <img style="max-width: 1100px; max-height: 733px; object-fit:contain;" src="images/foto-profile-2.jpeg"
-                alt="Image" class="img-fluid img">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="site-section" id="about-section">
       <div class="container">
 
@@ -125,65 +110,16 @@
             </div>
             <div class="form-group">
               <label>NIM</label>
-              <input type="text" class="form-control" value="201910060311071" readonly>
+              <input type="text" class="form-control" value="202310631011007" readonly>
             </div>
             <div class="form-group">
               <label>Kelas</label>
-              <input type="text" class="form-control" value="MATKOM 5B" readonly>
+              <input type="text" class="form-control" value="MATEMATIKA 001" readonly>
             </div>
             <div class="form-group">
               <label>Email</label>
               <input type="text" class="form-control" value="arumrahayu3@gmail.com" readonly>
             </div>
-            <p class="text-justify">
-              Halo, Perkenalkan namaku Arruum Rahayu. Kalian bisa memanggilku Arruum. Lahir di Kediri, 3 Oktober 2001,
-              saya merupakan anak ke-2 dari dua bersaudara. Riwayat pendidikan (TK Endah, SDN Bandar Lor 2, SMPN 4
-              Kediri, SMAN 1 Kediri) dan Saya sekarang adalah Mahasiswa aktif di Universitas Muhammadiyah Malang
-              tepatnya di Fakultas Keguruan Ilmu Pendidikan (FKIP) Prodi Pendidikan Matematika.
-            </p>
-
-            <p class="text-justify">
-              Mungkin sebagian orang bertanya-tanya kenapa sih mau belajar matematika, padahal matematika kan sulit dan
-              rumit??? Alasan saya memilih program studi ini karena sangat banyak keuntungan yang diperoleh dari seorang
-              lulusan pendidikan matematika. Banyak bidang pekerjaan yang membutuhkan lulusan dari jurusan ini yang mana
-              mampu berpikir analitis, logika, serta kemampuan pemecahan masalah.
-            </p>
-            <p class="text-justify">
-              Selain tertarik di bidang matematika saya juga tertarik di bidang seni suara dan tentunya pernah mengikuti
-              beberapa ajang perlombaan yang diselenggarakan oleh suatu instansi. Sejak duduk di bangku TK saya sudah
-              dilatih di bidang tarik suara dan terus diasah dan dikembangkan sampai saat ini.
-            </p>
-            <p class="text-justify">
-              Berikut penghargaan yang pernah saya dapatkan :
-            </p>
-            <ul>
-              <li>
-                Pada tahun 2015 saya mendapatkan Juara 1 Vocal Group FLS2N tingkat kota dan masuk ke-7 besar Vocal Group
-                FLS2N tingkat Provinsi.
-              </li>
-              <li>
-
-                Tahun 2016 mendapat juara 1 Vocal Group di acara English Camp yang dilaksanakan olej Wali Kota Kediri
-              </li>
-              <li>
-                Tahun 2019 mendapat Juara 2 lomba paduan suara yang dilaksanakan oleh UNISKA.
-              </li>
-              <li>
-                Tahun 2019 mendapat 3rd place Solo Pop putri competition matriks cup.
-              </li>
-              <li>
-                Tahun 2021 mendapat 1st place Solo Pop Putri Competition matriks cup.
-              </li>
-              <li>
-                1st place Keroncong Putri matriks cup
-              </li>
-              <li>
-                1st place Dekan Cup Solo Pop putri competition
-              </li>
-              <li>
-                2nd place Rector Cup Solo pop putri competition
-              </li>
-            </ul>
           </div>
         </div>
       </div>
