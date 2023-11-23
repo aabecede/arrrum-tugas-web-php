@@ -119,7 +119,7 @@
                       </ul>
                     </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td>
                       Kompetensi Dasar
                     </td>
@@ -133,7 +133,7 @@
                         </li>
                       </ul>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
