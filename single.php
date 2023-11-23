@@ -103,7 +103,7 @@
               </div>
             </div>
             <h2 class="text-black mb-4">Materi Pembelajaran</h2>
-            <div class="table">
+            <!-- <div class="table">
               <table class="table table-striped text-justify">
                 <tbody>
                   <tr>
@@ -119,7 +119,7 @@
                       </ul>
                     </td>
                   </tr>
-                  <!-- <tr>
+                  <tr>
                     <td>
                       Kompetensi Dasar
                     </td>
@@ -133,10 +133,10 @@
                         </li>
                       </ul>
                     </td>
-                  </tr> -->
+                  </tr>
                 </tbody>
               </table>
-            </div>
+            </div> -->
             <h2>
               Tujuan Pembelajaran
             </h2>
