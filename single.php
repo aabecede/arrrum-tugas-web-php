@@ -99,7 +99,7 @@
                 <img src="images/logo-umm/logo.png" style="width:100%; height:auto;">
               </div>
               <div class="col-6">
-                <img src="images/logo-umm/math-edu.png" style="width:100%; height:auto;">
+                <img src="images/mengajar-merdeka.png" style="width:100%; height:auto;">
               </div>
             </div>
             <h2 class="text-black mb-4">Materi Pembelajaran</h2>
@@ -260,7 +260,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 sidebar">
+          <!-- <div class="col-md-4 sidebar">
             <div class="sidebar-box">
               <img src="images/foto-profile-2.jpeg" style="max-width:300px; max-height:300px" alt="Image placeholder" class="img-fluid mb-4">
               <h3>About The Author</h3>
@@ -270,7 +270,7 @@
               </p>
               <p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
